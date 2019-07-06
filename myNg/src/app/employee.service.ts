@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Employee } from './employee';
+import {Observable,of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  getEmployees(): Employee[] {
-    return [
+  getEmployees(): Observable<Employee[]> {
+    return of([
       { id: 11, name: 'Dr Nice' },
       { id: 12, name: 'Narco' },
       { id: 13, name: 'Bombasto' },
@@ -17,6 +18,6 @@ export class EmployeeService {
       { id: 18, name: 'Dr IQ' },
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
-    ];  }
+    ]);  }
   constructor() { }
 }
