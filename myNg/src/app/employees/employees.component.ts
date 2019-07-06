@@ -1,26 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {Employee} from '../employee'
+import {EmployeeService} from '../employee.service'
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
-  employees: Employee[] = [
-    { id: 11, name: 'Dr Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
-  ];
-  constructor() { }
+  employees: Employee[];
+  constructor(private employeeService:EmployeeService) { }
 
   ngOnInit() {
+    this.getEmployees();
   }
-
+  getEmployees(): void {
+    this.employees = this.employeeService.getEmployees();
+  }
 }
