@@ -5,6 +5,7 @@
         <input type="text" [(ngModel)]="departmentModel.name" class="form-control" id="name" required>
       </div>
 
-      <button type="submit" class="btn btn-success">Save</button>
+      <input type="button" (click)="addDepartment()" class="btn btn-success" value="Save"/>
+      <a class="btn btn-default" [routerLink]="['/departments']">Cancel</a>
 
 </div>

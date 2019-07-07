@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {Department} from '../department'
 @Component({
   selector: 'app-department-add',
@@ -8,12 +9,14 @@ import {Department} from '../department'
 export class DepartmentAddComponent implements OnInit {
   departmentModel: Department;
 
-  constructor() { 
+  constructor(private router: Router) { 
 
   }
 
   ngOnInit() {
     this.departmentModel = new Department(1,'');
   }
-
+  addDepartment(): void {
+    this.router.navigateByUrl('/departments');
+  }
 }
