@@ -19,10 +19,10 @@
           <p class="card-text">{{emp.Age}}</p>
         </div>
       </div>
-      <div class="card mb-3">
+      <div *ngIf="emp.department" class="card mb-3">
         <div class="card-body">
           <h5 class="card-title">Department</h5>
-          <p class="card-text">{{emp.department}}</p>
+          <p class="card-text">{{emp.department.name}}</p>
         </div>
       </div>
       <div class="card mb-3">
