@@ -9,6 +9,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import { SelectedEmployeePipe } from './selected-employee.pipe';
 import { DepartmentsComponent } from './departments/departments.component';
 import { DepartmentAddComponent } from './department-add/department-add.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DepartmentAddComponent } from './department-add/department-add.componen
     EmployeeDetailComponent,
     SelectedEmployeePipe,
     DepartmentsComponent,
-    DepartmentAddComponent
+    DepartmentAddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
