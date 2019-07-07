@@ -8,16 +8,9 @@ import {Observable,of} from 'rxjs';
 export class EmployeeService {
   getEmployees(): Observable<Employee[]> {
     return of([
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 11, name: 'Dr Nice' ,age:30,department:'HR',experience:'1 year' },
+      { id: 12, name: 'Narco',age:40,department:'IT',experience:'3 year' },
+      { id: 13, name: 'Bombasto',age:42,department:'Admin',experience:'10 year' }
     ]);  }
   constructor() { }
 }

@@ -1,5 +1,7 @@
-<ul class="">
-    <li *ngFor="let employee of employees">
-        <span class="">{{employee.id}}</span> {{employee.name}}
-  </li>
-</ul>
+<div class="container mt-5">
+  <h1>Employees</h1>
+  <div class="list-group">
+      <a class="list-group-item list-group-item-action" *ngFor="let employee of employees" 
+      [routerLink]="['/employee', employee.id]">{{employee.name}}</a>
+  </div>
+</div>

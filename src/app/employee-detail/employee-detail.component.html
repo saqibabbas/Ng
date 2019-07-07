@@ -1,0 +1,36 @@
+<div class="container mt-5 mb-5">
+    <h1>Employee Details</h1>
+    <div class="card-columns" *ngFor="let emp of (employees | selectedEmployee: id)">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Id</h5>
+          <p class="card-text">{{emp.id}}</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Name</h5>
+          <p class="card-text">{{emp.name}}</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Age</h5>
+          <p class="card-text">{{emp.Age}}</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Department</h5>
+          <p class="card-text">{{emp.department}}</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Experience</h5>
+          <p class="card-text">{{emp.experience}}</p>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary" [routerLink]="['/employees']">Back</a>
+</div>
