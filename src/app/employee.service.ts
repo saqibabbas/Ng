@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private empUrl = 'http://www.mocky.io/v2/5d23285d2e00009262c3eeed';  // URL to web api
+  private empUrl = 'https://www.mocky.io/v2/5d23285d2e00009262c3eeed';  // URL to web api
   constructor( private http: HttpClient) { 
 
   }

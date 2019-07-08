@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DepartmentService {
-  private depUrl = 'http://www.mocky.io/v2/5d2326b82e00008470c3eedf';  // URL to web api
+  private depUrl = 'https://www.mocky.io/v2/5d2326b82e00008470c3eedf';  // URL to web api
   constructor( private http: HttpClient) { 
 
   }
