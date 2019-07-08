@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Department } from './department';
 import {Observable,of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DepartmentService {
+  private depUrl = 'http://www.mocky.io/v2/5d2326b82e00008470c3eedf';  // URL to web api
+  constructor( private http: HttpClient) { 
+
+  }
   getDepartments(): Observable<Department[]> {
-    return of([
-      { id: 1, name: 'HR' },
-      { id: 2, name: 'IT' },
-      { id: 3, name: 'Admin' }
-    ]);  }
-  constructor() { }
+    return this.http.get<Department[]>(this.depUrl)
+  }
 }

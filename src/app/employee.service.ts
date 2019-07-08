@@ -2,16 +2,17 @@ import { Injectable } from '@angular/core';
 import { Employee } from './employee'
 import { Department } from './department';
 import {Observable,of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
+  private empUrl = 'http://www.mocky.io/v2/5d23285d2e00009262c3eeed';  // URL to web api
+  constructor( private http: HttpClient) { 
+
+  }
   getEmployees(): Observable<Employee[]> {
-    return of([
-      { id: 11, name: 'Dr Nice' ,age:30,department:new Department(1,"HR"),experience:'1 year' },
-      { id: 12, name: 'Narco',age:40,department:null,experience:'3 year' },
-      { id: 13, name: 'Bombasto',age:42,department:new Department(2,"IT"),experience:'10 year' }
-    ]);  }
-  constructor() { }
+    return this.http.get<Employee[]>(this.empUrl)
+  }
 }
